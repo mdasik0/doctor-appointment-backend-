@@ -7,6 +7,7 @@ const cors = require("cors");
 const authenticate = require("./middleware/authenticate");
 const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/pageRoutes");
+const doctorRoutes = require("./routes/doctorRoutes");
 const app = express();
 
 // Middleware
@@ -28,6 +29,7 @@ app.get("/api/auth/me", authenticate, (req, res) => {
 });
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/doctors", doctorRoutes);
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="dashboard-container">
+    <section class="dashboard-card">
+      <h1>Patient Dashboard</h1>
+
+      <p>Welcome, <strong><%= user.name %></strong>!</p>
+
+      <div class="user-details">
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Mobile:</strong> <%= user.mobile %></p>
+        <p><strong>Role:</strong> <%= user.role %></p>
+      </div>
+
+      <p class="subtitle">
+        Your appointments will appear here.
+      </p>
+
+      <form action="/logout" method="POST">
+        <button type="submit" class="logout-button">Logout</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
